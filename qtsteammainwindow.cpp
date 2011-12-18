@@ -11,7 +11,4 @@ QtSteamMainWindow::QtSteamMainWindow(QWidget *parent) :
 QtSteamMainWindow::~QtSteamMainWindow()
 {
     delete ui;
-    QToolBox *tool = ui->toolBox;
-    tool->setWindowTitle("Hola a todos");
-    tool->setWindowTitle("Hola a todos");
 }

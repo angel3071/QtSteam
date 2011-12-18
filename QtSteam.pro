@@ -18,5 +18,7 @@ HEADERS  += qtsteammainwindow.h
 FORMS    += qtsteammainwindow.ui
 
 RESOURCES += \
-    Recursos.qrc
+    ResourcesQtSteam.qrc
+
+
 
