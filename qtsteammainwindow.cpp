@@ -11,4 +11,5 @@ QtSteamMainWindow::QtSteamMainWindow(QWidget *parent) :
 QtSteamMainWindow::~QtSteamMainWindow()
 {
     delete ui;
+    // Comentario agregado desde el clon en la lap
 }
