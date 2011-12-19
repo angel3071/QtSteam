@@ -13,4 +13,5 @@ QtSteamMainWindow::~QtSteamMainWindow()
     delete ui;
     // Comentario agregado desde el clon en la lap
     // Este si se sube solo con un push
+    // a ver este ultimo
 }
