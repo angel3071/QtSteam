@@ -17,6 +17,13 @@ QtSteamMainWindow::QtSteamMainWindow(QWidget *parent) :
     //Just trying
 
     QObject::connect(ui->actionNew_Row, SIGNAL(triggered()), this, SLOT(insertRow()));
+
+   // QObject::connect(tabla, SIGNAL(currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)),
+     //       this, SLOT(updateStatus(QTableWidgetItem*)));
+
+    QObject::connect(tabla, SIGNAL(cellClicked(int,int)),
+            this, SLOT(updateStatus(int, int)));
+
     //QObject::connect(ui->principalSheet, SIGNAL(itemEntered(QTableWidgetItem*)),
                      //this, SLOT(itemEntered(QTableWidgetItem*)));
 
@@ -50,6 +57,16 @@ QtSteamMainWindow::~QtSteamMainWindow()
     // Comentario agregado desde el clon en la lap
     // Este si se sube solo con un push
     // a ver este ultimo
+}
+
+void QtSteamMainWindow::updateStatus(int a, int) {
+
+    /*if (item && item == tabla->currentItem()) {
+        statusBar()->showMessage(item->data(Qt::StatusTipRole).toString(),
+                                 1000);
+        ui->actualCell->setText(tr("Cell %1 ").arg(tabla->row(item) + 1));
+    }*/
+    ui->actualCell->setText(tr("Cell %1").arg(a + 1));
 }
 
 void QtSteamMainWindow::insertRow() {

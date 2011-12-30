@@ -11,9 +11,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        qtsteammainwindow.cpp
+        qtsteammainwindow.cpp \
+    state.cpp \
+    steamstate.cpp
 
-HEADERS  += qtsteammainwindow.h
+HEADERS  += qtsteammainwindow.h \
+    state.h \
+    steamstate.h
 
 FORMS    += qtsteammainwindow.ui
 

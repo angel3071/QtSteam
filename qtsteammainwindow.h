@@ -19,6 +19,7 @@ public:
     ~QtSteamMainWindow();
 
 public slots:
+    void updateStatus(int a, int);
 
 
 private:
