@@ -1,14 +1,15 @@
 <RCC>
-  <qresource prefix="/">
-    <file>icons/go-next.svg</file>
-    <file>icons/Bullet Bill.png</file>
-    <file>icons/document-new.svg</file>
-    <file>icons/document-open.svg</file>
-    <file>icons/document-save.svg</file>
-    <file>icons/edit-clear.svg</file>
-    <file>icons/edit-delete.svg</file>
-    <file>icons/edit-redo.svg</file>
-    <file>icons/edit-undo.svg</file>
-    <file>icons/window-close.svg</file>
-  </qresource>
+    <qresource prefix="/">
+        <file>icons/go-next.svg</file>
+        <file>icons/Bullet Bill.png</file>
+        <file>icons/document-new.svg</file>
+        <file>icons/document-open.svg</file>
+        <file>icons/document-save.svg</file>
+        <file>icons/edit-clear.svg</file>
+        <file>icons/edit-delete.svg</file>
+        <file>icons/edit-redo.svg</file>
+        <file>icons/edit-undo.svg</file>
+        <file>icons/window-close.svg</file>
+        <file>icons/list-add.svg</file>
+    </qresource>
 </RCC>

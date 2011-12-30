@@ -51,7 +51,7 @@
             <x>0</x>
             <y>0</y>
             <width>127</width>
-            <height>382</height>
+            <height>384</height>
            </rect>
           </property>
           <attribute name="label">
@@ -218,7 +218,7 @@
             <x>0</x>
             <y>0</y>
             <width>127</width>
-            <height>382</height>
+            <height>384</height>
            </rect>
           </property>
           <attribute name="label">
@@ -248,8 +248,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>100</width>
-            <height>30</height>
+            <width>127</width>
+            <height>384</height>
            </rect>
           </property>
           <attribute name="label">
@@ -279,6 +279,26 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="actualCell">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Cell</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="actualCellContent"/>
+        </item>
+       </layout>
+      </item>
+      <item>
        <widget class="QTabWidget" name="sheetTabWidget">
         <property name="currentIndex">
          <number>0</number>
@@ -290,7 +310,7 @@
          <attribute name="title">
           <string>No saved...</string>
          </attribute>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
           <item>
            <widget class="QTableWidget" name="principalSheet">
             <property name="sortingEnabled">
@@ -302,111 +322,6 @@
             <property name="cornerButtonEnabled">
              <bool>true</bool>
             </property>
-            <row>
-             <property name="text">
-              <string>1</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>2</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>3</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>4</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>5</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>6</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>7</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>8</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>9</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>10</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>11</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>12</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>13</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>14</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>15</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>16</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>17</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>18</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>19</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>20</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>21</string>
-             </property>
-            </row>
             <column>
              <property name="text">
               <string>State</string>
@@ -533,6 +448,7 @@
    <addaction name="actionUndo"/>
    <addaction name="actionRedo"/>
    <addaction name="separator"/>
+   <addaction name="actionNew_Row"/>
    <addaction name="actionClear"/>
    <addaction name="actionClear_All"/>
    <addaction name="separator"/>
@@ -656,6 +572,21 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionNew_Row">
+   <property name="icon">
+    <iconset resource="ResourcesQtSteam.qrc">
+     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg</iconset>
+   </property>
+   <property name="text">
+    <string>New Row</string>
+   </property>
+   <property name="toolTip">
+    <string>Insert a new row at the end of the table</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
    </property>
   </action>
  </widget>
