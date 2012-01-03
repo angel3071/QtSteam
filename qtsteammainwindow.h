@@ -16,10 +16,14 @@ class QtSteamMainWindow : public QMainWindow
 public:
     explicit QtSteamMainWindow(QWidget *parent = 0);
     QTableWidget *tabla;
+    //QStringList *verticalHeaders;
+    QStringList horizontalHeaders;
+    QStringList horizontalHeadersToolTips;
+
     ~QtSteamMainWindow();
 
 public slots:
-    void updateStatus(int a, int);
+    void updateStatus(int row, int col);
 
 
 private:
@@ -27,7 +31,6 @@ private:
 
 private slots:
     void insertRow();
-    void itemEntered(QTableWidgetItem *item);
 };
 
 #endif // QTSTEAMMAINWINDOW_H

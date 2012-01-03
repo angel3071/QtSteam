@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>816</width>
-    <height>591</height>
+    <width>950</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,11 +51,14 @@
             <x>0</x>
             <y>0</y>
             <width>127</width>
-            <height>384</height>
+            <height>443</height>
            </rect>
           </property>
           <attribute name="label">
            <string>Water</string>
+          </attribute>
+          <attribute name="toolTip">
+           <string>Steam Water</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
@@ -96,60 +99,6 @@
              </item>
              <item>
               <layout class="QGridLayout" name="gridLayout">
-               <item row="0" column="0">
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string>T</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="label_2">
-                 <property name="text">
-                  <string>P</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QComboBox" name="waterPcomboBox">
-                 <item>
-                  <property name="text">
-                   <string>Pascal</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Bar</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Atm</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QLabel" name="label_3">
-                 <property name="text">
-                  <string>u</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="1">
-                <widget class="QComboBox" name="waterUcomboBox">
-                 <item>
-                  <property name="text">
-                   <string>Kj/Kg</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>cal/g</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
                <item row="3" column="0">
                 <widget class="QLabel" name="label_4">
                  <property name="text">
@@ -161,33 +110,12 @@
                 <widget class="QComboBox" name="waterHcomboBox">
                  <item>
                   <property name="text">
-                   <string>Kj/Kg</string>
+                   <string>kJ / kg</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>cal/g</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item row="4" column="0">
-                <widget class="QLabel" name="label_5">
-                 <property name="text">
-                  <string>s</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="1">
-                <widget class="QComboBox" name="waterScomboBox">
-                 <item>
-                  <property name="text">
-                   <string>Kj/KgK</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>cal/gºC</string>
+                   <string>cal / g</string>
                   </property>
                  </item>
                 </widget>
@@ -206,6 +134,112 @@
                  </item>
                 </widget>
                </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>P</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QComboBox" name="waterPcomboBox">
+                 <item>
+                  <property name="text">
+                   <string>Pa</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>kPa</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>MPa</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Bar</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Atm</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>s</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QComboBox" name="waterScomboBox">
+                 <item>
+                  <property name="text">
+                   <string>kJ / kgK</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>cal / gºC</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>u</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QComboBox" name="waterUcomboBox">
+                 <item>
+                  <property name="text">
+                   <string>kJ / kg</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>cal / g</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>T</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>v</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QComboBox" name="waterVcomboBox">
+                 <item>
+                  <property name="text">
+                   <string>v: m³ / kg</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>ρ: kg / m³</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
               </layout>
              </item>
             </layout>
@@ -218,7 +252,7 @@
             <x>0</x>
             <y>0</y>
             <width>127</width>
-            <height>384</height>
+            <height>443</height>
            </rect>
           </property>
           <attribute name="label">
@@ -249,11 +283,14 @@
             <x>0</x>
             <y>0</y>
             <width>127</width>
-            <height>384</height>
+            <height>443</height>
            </rect>
           </property>
           <attribute name="label">
            <string>Another</string>
+          </attribute>
+          <attribute name="toolTip">
+           <string>In plans...</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_5">
            <item>
@@ -322,41 +359,6 @@
             <property name="cornerButtonEnabled">
              <bool>true</bool>
             </property>
-            <column>
-             <property name="text">
-              <string>State</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>T</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>u</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>h</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>s</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>v</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>x</string>
-             </property>
-            </column>
            </widget>
           </item>
          </layout>
@@ -397,7 +399,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>816</width>
+     <width>950</width>
      <height>21</height>
     </rect>
    </property>

@@ -10,6 +10,3 @@ State::State(QObject *parent) :
 
 }
 
-QBool State::calculate() {
-
-}

@@ -13,16 +13,19 @@ TEMPLATE = app
 SOURCES += main.cpp\
         qtsteammainwindow.cpp \
     state.cpp \
-    steamstate.cpp
+    qsteamstate.cpp
 
 HEADERS  += qtsteammainwindow.h \
     state.h \
-    steamstate.h
+    qsteamstate.h
 
 FORMS    += qtsteammainwindow.ui
 
 RESOURCES += \
     ResourcesQtSteam.qrc
+
+
+LIBS    += -L/usr/include/freesteam/    -lfreesteam
 
 
 

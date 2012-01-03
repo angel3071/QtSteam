@@ -8,10 +8,24 @@ class State : public QObject
     Q_OBJECT
 public:
     explicit State(QObject *parent = 0);
-    double t;
-    QBool calculate();
-    
+
+    bool allRigth;
+    int onCreationErrorCode;
+
+    void setTemperature(double temp){
+            this->tempeerature = temp;}
+    double getTemperature(){
+            return this->tempeerature;}
+
+
+private:
+
+    double tempeerature;
+    double pressure;
+    double enthalpy;
+
 signals:
+
     
 public slots:
 
