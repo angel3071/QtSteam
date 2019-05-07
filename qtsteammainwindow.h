@@ -24,6 +24,7 @@ public:
 
 public slots:
     void updateStatus(int row, int col);
+    void resolveRow();
 
 
 private:
@@ -31,6 +32,7 @@ private:
 
 private slots:
     void insertRow();
+    void on_principalSheet_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn);
 };
 
 #endif // QTSTEAMMAINWINDOW_H

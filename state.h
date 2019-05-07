@@ -12,17 +12,38 @@ public:
     bool allRigth;
     int onCreationErrorCode;
 
-    void setTemperature(double temp){
-            this->tempeerature = temp;}
-    double getTemperature(){
-            return this->tempeerature;}
+    //void setTemperature(double temp){
+    //      this->temperature = temp;}
+    double getTemperature() {
+            return this->temperature; }
+
+    double getPressure() {
+            return this->pressure; }
+
+    double getInternalEnergy() {
+            return this->internalEnergy; }
+
+    double getEntropy() {
+            return this->entropy; }
+
+    double getVolume() {
+            return this->volume; }
+
+    double getQuality() {
+            return this->quality; }
+
+    double getEnthalpy() {
+            return this->enthalpy; }
+    double temperature;
+    double pressure;
+    double internalEnergy;
+    double entropy;
+    double volume;
+    double quality;
+    double enthalpy;
 
 
 private:
-
-    double tempeerature;
-    double pressure;
-    double enthalpy;
 
 signals:
 

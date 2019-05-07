@@ -326,7 +326,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Cell</string>
+           <string/>
           </property>
          </widget>
         </item>

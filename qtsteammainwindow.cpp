@@ -1,6 +1,7 @@
 #include "qtsteammainwindow.h"
 #include "ui_qtsteammainwindow.h"
 #include "qsteamstate.h"
+#include <QMessageBox>
 
 QtSteamMainWindow::QtSteamMainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -24,9 +25,9 @@ QtSteamMainWindow::QtSteamMainWindow(QWidget *parent) :
     //qDebug() << "es este" << abe;
     //Just trying
 
-   QSteamState *a = new QSteamState();
-   a->setTemperature(500);
-   qDebug() << a->getTemperature();
+   //QSteamState *a = new QSteamState();
+   //a->setTemperature(500);
+   //qDebug() << a->getTemperature();
 
 
 
@@ -43,6 +44,10 @@ QtSteamMainWindow::QtSteamMainWindow(QWidget *parent) :
 
     //QObject::connect(ui->principalSheet, SIGNAL(itemEntered(QTableWidgetItem*)),
                      //this, SLOT(itemEntered(QTableWidgetItem*)));
+
+
+   connect(ui->calculateButton, SIGNAL(clicked()), this, SLOT(resolveRow()));
+
 //! 2
 
 //! 3 Set the table...
@@ -100,12 +105,36 @@ void QtSteamMainWindow::updateStatus(int row, int col) {
                                  1000);
         ui->actualCell->setText(tr("Cell %1 ").arg(tabla->row(item) + 1));
     }*/
-    ui->actualCell->setText(tr("Cell   %1 : %2").arg(horizontalHeaders[col]).arg(row + 1));
+    QMessageBox::warning(this, "hola", tr("nada").append(QString::number( tabla->selectedItems().count() )));
+    if(tabla->selectedItems().count() == 1)
+        ui->actualCell->setText(tr("%1 : %2").arg(horizontalHeadersToolTips[col]).arg(row + 1));
+}
+
+void QtSteamMainWindow::resolveRow() {
+
+   //En este metodo se habra de comprobar sustancia a calcular asi como unidades para la salida
+    //ui->substancesToolBox->currentIndex()
+
+    double t = tabla->item(4,1)->text().toDouble();
+    double p = tabla->item(4,2)->text().toDouble();
+
+    qDebug() << t << p;
+
+    QSteamState *a = new QSteamState(t,p);
+    QString temp;
+    qDebug("%f %i", a->getEnthalpy(), ui->substancesToolBox->currentIndex());
+    QTableWidgetItem *i = new QTableWidgetItem(temp.setNum(a->getEnthalpy(), 'e', 5));
+    tabla->setItem(4,4,i);
+
+
+
+
+
 }
 
 void QtSteamMainWindow::insertRow() {
 
-    if(tabla->rowCount() >= 100){
+    if (tabla->rowCount() >= 100) {
         qDebug() << "Seriously?, you need more rows? i dont think so...";
         return ;
     }
@@ -116,3 +145,8 @@ void QtSteamMainWindow::insertRow() {
 }
 
 
+
+void QtSteamMainWindow::on_principalSheet_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn)
+{
+    qDebug() << currentRow << currentColumn << previousRow << previousColumn;
+}
